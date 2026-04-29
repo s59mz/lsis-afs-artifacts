@@ -1,0 +1,21 @@
+Gold PRNs validated: 210/210
+Weil primary PRNs validated: 210/210
+Weil tertiary PRNs validated: 210/210
+Secondary codes validated: S0-S3
+Hex export files generated: 210
+Cross-implementation comparison: matched
+
+
+Cross-implementation comparison results:
+Team name: LuarSpace
+
+python3 validate.py diff ../../lsis-afs/artifacts/code_vectors/
+Compared 210/210 PRNs (missing: 0)
+  GOLD_CODE     : 210/210
+  WEIL_PRIMARY  : 210/210
+  WEIL_TERTIARY : 210/210
+  SECONDARY_S0  : 210/210
+  SECONDARY_S1  : 210/210
+  SECONDARY_S2  : 210/210
+  SECONDARY_S3  : 210/210
+OK - bit-exact match.
