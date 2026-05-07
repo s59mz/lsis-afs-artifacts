@@ -3,6 +3,8 @@ from pathlib import Path
 import numpy as np
 
 from lsis_afs.io.frame import write_frame_binary
+from lsis_afs.protocol.subframes import build_sb2_payload
+
 from lsis_afs.protocol.frame import (
     SB2_PAYLOAD_BITS,
     SB34_PAYLOAD_BITS,
@@ -161,6 +163,28 @@ def main() -> None:
         node_id=210,
     )
 
+
+    # Boundary max fields: 
+    # All-ones SB2/SB3/SB4 with SB2[13..21] (ITOW field) clamped to 503 spec max; 
+    # FID=3, TOI=99, PRN=210
+    # WN=8191, ITOW=503 maxima
+    sb2 = build_sb2_payload(
+        wn=8191,
+        itow=503,
+        health=255,
+        ced=all_ones(896),
+        time_conv=all_ones(224),
+    )
+
+    export_frame(
+        "boundary_max_fields",
+        sb2,
+        all_ones(SB34_PAYLOAD_BITS),
+        all_ones(SB34_PAYLOAD_BITS),
+        fid=3,
+        toi=99,
+        node_id=210,
+    )
 
 if __name__ == "__main__":
     main()

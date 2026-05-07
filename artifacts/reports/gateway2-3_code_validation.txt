@@ -1,0 +1,22 @@
+Frame export files generated: 7
+
+/workspace$ ./scripts/export_frames.sh
+Wrote artifacts/frame_vectors/frame_message_1.bin
+Wrote artifacts/frame_vectors/frame_message_2.bin
+Wrote artifacts/frame_vectors/frame_message_3.bin
+Wrote artifacts/frame_vectors/frame_message_4.bin
+Wrote artifacts/frame_vectors/frame_message_5.bin
+Wrote artifacts/frame_vectors/frame_boundary.bin
+Wrote artifacts/frame_vectors/frame_boundary_max_fields.bin
+
+
+Cross-implementation comparison: matched
+
+Cross-implementation comparison results:
+Team name: LuarSpace
+
+python validate.py diff-frames ../workspace/artifacts/frame_vectors
+Compared 7/7 frames (missing: 0)
+  Bit-exact:  7/7
+OK — bit-exact match.
+

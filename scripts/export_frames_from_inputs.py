@@ -5,7 +5,7 @@ from lsis_afs.io.frame_inputs import read_frame_input_file
 from lsis_afs.protocol.frame import build_fid0_frame_from_payloads
 
 
-INPUT_DIR = Path("artifacts/frame_inputs")
+INPUT_DIR = Path("../lsis-afs-test-vectors/inputs")
 OUT_DIR = Path("artifacts/frame_vectors_from_inputs")
 
 FRAME_TIMESTAMP = 1738108800
@@ -18,6 +18,7 @@ FRAME_METADATA = {
     "frame_message_4_input.bin": {"out": "frame_message_4.bin", "prn": 1, "fid": 0, "toi": 0},
     "frame_message_5_input.bin": {"out": "frame_message_5.bin", "prn": 1, "fid": 0, "toi": 0},
     "frame_boundary_input.bin": {"out": "frame_boundary.bin", "prn": 210, "fid": 3, "toi": 99},
+    "frame_boundary_max_fields_input.bin": {"out": "frame_boundary_max_fields.bin", "prn": 210, "fid": 3, "toi": 99},
 }
 
 
